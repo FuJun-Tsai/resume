@@ -69,6 +69,27 @@ hr{
             bottom: 0;
             color: #333;
             font-size: 12px;
+            letter-spacing: 0;
+            @media screen and (max-width:350px) {
+                position: static;
+                display: block;
+            }
+        }
+    }
+}
+#education{
+    p{
+        position: relative;
+        span{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 12px;
+            letter-spacing: 0;
+            @media screen and (max-width:350px) {
+                position: static;
+                display: block;
+            }
         }
     }
 }

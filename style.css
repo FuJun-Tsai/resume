@@ -87,4 +87,28 @@ hr {
   bottom: 0;
   color: #333;
   font-size: 12px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 350px) {
+  #career-summary h5 span {
+    position: static;
+    display: block;
+  }
+}
+
+#education p {
+  position: relative;
+}
+#education p span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 350px) {
+  #education p span {
+    position: static;
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
