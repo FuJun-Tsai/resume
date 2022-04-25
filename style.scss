@@ -16,7 +16,7 @@ body{
 p, li{
     letter-spacing: 1px;
     text-align: justify;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0;
 }
 hr{
@@ -46,10 +46,8 @@ hr{
         border: 3px solid $color-back;
     }
 }
-
 #personal-information{
     p{
-        font-size: 16px;
         a{
             color: #000;
             text-decoration: none;
@@ -59,6 +57,18 @@ hr{
             width: 20px;
             height: 20px;
             text-align: center;
+        }
+    }
+}
+#career-summary{
+    h5{
+        position: relative;
+        span{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: #333;
+            font-size: 12px;
         }
     }
 }
