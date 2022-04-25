@@ -65,4 +65,18 @@ hr {
      object-position: 50% 0%;
   border-radius: 50%;
   border: 3px solid #eee;
+}
+
+#personal-information p {
+  font-size: 16px;
+}
+#personal-information p a {
+  color: #000;
+  text-decoration: none;
+}
+#personal-information p span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
