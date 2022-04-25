@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+$color-back: #eee;
+$color-main: #218646;
+
+body{
+    padding-top: 20px;
+    background: $color-back;
+}
+
+.text-color-main{
+    color: $color-main;
+}
+
+.back-color-main{
+    color: $color-main;
+}
+
+#carte{
+    .background{
+        background: linear-gradient(0deg, #fff 70%, transparent 70%);
+        .headshot{
+            $size: 120px;
+            width: $size;
+            height: $size;
+            object-fit: cover;
+            object-position: 50% 0%;
+            border-radius: 50%;
+            border: 3px solid $color-back;
+        }
+    }
+}
+
+

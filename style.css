@@ -1,1 +1,30 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 20px;
+  background: #eee;
+}
+
+.text-color-main {
+  color: #218646;
+}
+
+.back-color-main {
+  color: #218646;
+}
+
+#carte .background {
+  background: linear-gradient(0deg, #fff 70%, transparent 70%);
+}
+#carte .background .headshot {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  border-radius: 50%;
+  border: 3px solid #eee;
+}/*# sourceMappingURL=style.css.map */
