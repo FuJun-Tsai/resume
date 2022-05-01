@@ -70,17 +70,10 @@ hr {
   text-align: justify;
 }
 
-#personal-information p a {
-  color: #000;
-  text-decoration: none;
+#career-summary p, #career-summary li {
+  letter-spacing: 1px;
+  text-align: justify;
 }
-#personal-information p span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-
 #career-summary h5 {
   position: relative;
 }
@@ -97,6 +90,17 @@ hr {
     position: static;
     display: block;
   }
+}
+
+#personal-information p a {
+  color: #000;
+  text-decoration: none;
+}
+#personal-information p span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
 
 #education p {

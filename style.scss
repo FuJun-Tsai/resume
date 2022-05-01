@@ -53,21 +53,10 @@ hr{
         @include readable();
     }
 }
-#personal-information{
-    p{
-        a{
-            color: #000;
-            text-decoration: none;
-        }
-        span{
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-        }
-    }
-}
 #career-summary{
+    p,li{
+        @include readable();
+    }
     h5{
         position: relative;
         span{
@@ -81,6 +70,20 @@ hr{
                 position: static;
                 display: block;
             }
+        }
+    }
+}
+#personal-information{
+    p{
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
         }
     }
 }
