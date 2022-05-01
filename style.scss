@@ -14,10 +14,12 @@ body{
     }
 }
 p, li{
-    letter-spacing: 1px;
-    text-align: justify;
     font-size: 14px;
     margin-bottom: 0;
+}
+@mixin readable{
+    letter-spacing: 1px;
+    text-align: justify;
 }
 hr{
     margin-top: 0;
@@ -44,6 +46,11 @@ hr{
         object-position: 50% 0%;
         border-radius: 50%;
         border: 3px solid $color-back;
+    }
+}
+#personal-statement{
+    p{
+        @include readable();
     }
 }
 #personal-information{
