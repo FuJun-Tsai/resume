@@ -29,11 +29,6 @@ hr{
     height: 2px !important;
 }
 
-.container{
-    @media screen and (min-width:1200px) {
-        width: 960px;
-    }
-}
 .text-color-main{
     color: $color-main;
 }
