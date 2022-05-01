@@ -8,6 +8,8 @@ body{
     padding-top: 20px;
     background: $color-back;
 }
+main{
+}
 @for $i from 1 to 7 {
     h#{$i}{
         margin-bottom: 0;
@@ -27,6 +29,11 @@ hr{
     height: 2px !important;
 }
 
+.container{
+    @media screen and (min-width:1200px) {
+        width: 960px;
+    }
+}
 .text-color-main{
     color: $color-main;
 }
@@ -92,14 +99,26 @@ hr{
         position: relative;
         line-height: 1;
         span{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            font-size: 12px;
             letter-spacing: 0;
-            @media (min-width:768px) and (max-width:1200px) {
+            font-size: 12px;
+            @mixin text-right{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            @mixin text-block{
                 position: static;
                 display: block;
+            }
+            @include text-block();
+            @media screen and (min-width:400px) {
+                @include text-right();
+            }
+            @media screen and (min-width:768px) {
+                @include text-block();
+            }
+            @media screen and (min-width:1200px) {
+                @include text-right();
             }
         }
     }
