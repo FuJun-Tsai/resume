@@ -17,6 +17,13 @@
               </p>
             </template>
           </sectionComponent>
+          <sectionComponent id="improve" :title="'自我精進'">
+            <template v-slot>
+              <ul>
+                <li v-for="item in improve" :key="item">{{ item }}</li>
+              </ul>
+            </template>
+          </sectionComponent>
           <sectionComponent id="career-summary" :title="'經歷'">
             <template v-slot>
               <template v-for="carrer in careerSummary" :key="carrer.company">
@@ -29,7 +36,15 @@
                 </p>
                 <ul>
                   <li v-for="item in carrer.describtion" :key="item.content">
-                    {{ item.content }}
+                    <template v-if="item.title">
+                      <span class="fw-bolder">
+                        {{ item.title }}
+                      </span>
+                      <br>
+                    </template>
+                    <span>
+                      {{ item.content }}
+                    </span>
                   </li>
                 </ul>
               </template>
@@ -133,10 +148,9 @@ const resumeChineseName: Ref<string> = ref('蔡富鈞');
 const resumeEnglishName: Ref<string> = ref('Nick Tsai');
 
 const introduction: Ref<string[]> = ref([
-  '在大四時因為專題而接觸程式，於是開始對程式開發產生興趣，畢業後選擇先至資策會的前端開發專班，學習相關的技能，之後也順利成為了一位前端開發工程師。',
-  '我是一個有目標，也是會不斷精進能力、尋根究底的人，面對問題時，會先釐清後再劃分小任務，逐步解決，從這樣的過程中獲得的成就感，正是我努力不懈的動力來源。',
-  '我有隨身攜帶紙筆的習慣，且會把任何前輩交辦的事項及未完成項目記錄下來，避免讓我因為遺漏一點小事情，而對團隊造成負擔或是無法挽回的後果。',
-  '我目前雖然較擅長前端開發的相關技術，但是對於未來的目標，除了要累積更多的前端開發經驗，更是期盼自己能成為一個全端工程師，跨足後端以及資料庫等領域。雖然疫情嚴峻，這段期間也讓面試及應徵工作的時程延宕了很多時間，不過我能調適心情及讓自己保持在蓄勢待發的狀態，若順利任職，我相信自己能立即帶給公司互利多贏的效益。',
+  '我是一個有條理的人，當我被賦予任務時，會先擬定數個步驟一步步將其完成，這樣工作使我的心情比較踏實，並且交付的任務得到認可，給我很大的成就感。',
+  '在過去的職務，都是擔任前端工程師，負責舊案維護與新案研發，與後端工程師協作的過程中，他們透過資料庫以及後端技術落實人力資源管理上的各種應用令我佩服。所以我就用工作之餘自學所需要的開發技術，並以電子商務網站作為目標，再搭配範例資料庫，實作出一個基礎購物結帳的流程。',
+  '我希望我能夠成為一位邏輯性強及思考周全的開發者，參與更多與使用者有關的需求討論會議，從程式設計中給予更多實用性的建議。所以，若有幸能進入這個環境，我會盡所能快速地融入這個大環境，再來投入所學至開發的項目中，為公司創造更多的效益。',
 ]);
 
 const careerSummary: Ref<CareerSummary[]> = ref([
@@ -197,6 +211,14 @@ const careerSummary: Ref<CareerSummary[]> = ref([
       }
     ],
   },
+]);
+
+const improve: Ref<string[]> = ref([
+  '使用Visual Studio的專案範本創建Vue and ASP.NET Core專案，並且完成Vue3的前端套版。',
+  '使用Database first的方式完成資料庫連線，生成與資料表型別一致的類別，用來與資料庫溝通。',
+  '使用ASP.NET Core開發Web API，包含前端介接與資料庫互動，例如：取得商品列表、結帳功能。 ',
+  '使用LINQ語法，依賴他的擴充性完成各種資料集合處理，並且檢查處理過程，減少除錯成本。',
+  '準備部署於Azure的計畫，預計使用一個月免費方案發佈專案至app service，瞭解其中相關的功能。'
 ]);
 
 const personalInformation: Ref<PersonalInformation[]> = ref([
